@@ -27,20 +27,55 @@
             font-family: "Raleway", sans-serif
         }
 
-        .navbar {
+        #navbar {
             width: 100%;
-            height: 70px;
+            height: 50px;
             top: 0;
             position: sticky;
             background-color: lightgray;
             display: flex;
             align-items: center;
             justify-content: flex-end;
-            margin-right: 2px;
+            margin-right: 1px;
+            transition: top 0.3s;
         }
 
         .topnav {
             margin-right: 1rem;
+        }
+
+        #openNav {
+            background-color: transparent;
+            border: none;
+            margin-right: auto;
+            cursor: pointer;
+        }
+
+        #openNav div {
+            border-radius: 10px;
+            margin: 6px 0;
+            height: 5px;
+            background-color: black;
+            transition: 0.3s;
+        }
+
+        #openNav .line-one {
+            width: 35px;
+            height: 5px;
+        }
+
+        #openNav .line-two {
+            width: 25px;
+            height: 5px;
+        }
+
+        #openNav .line-three {
+            width: 30px;
+            height: 5px;
+        }
+
+        #openNav:hover div {
+            width: 35px;
         }
 
         .topnav:first-child {
@@ -52,10 +87,67 @@
             height: 40px;
         }
 
-        button.button-close {
-            background: none;
+        .Icon {
+            width: 50px;
+            height: 50px;
+            position: relative;
+            transform: rotate(0deg);
+            transition: .5s ease-in-out;
+            cursor: pointer;
+            background-color: transparent;
             border: none;
-            outline: none;
+        }
+
+        .Icon span {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 23px;
+            height: 8px;
+            width: 100%;
+            background: black;
+            border-radius: 4px;
+            transform: rotate(0deg);
+            transition: .2s ease-in-out;
+        }
+
+        .Icon span:nth-child(1),
+        .Icon span:nth-child(3) {
+            width: 50%;
+            transform: rotate(45deg);
+        }
+
+        .Icon span:nth-child(1) {
+            left: 3px;
+            top: 15px;
+        }
+
+        .Icon span:nth-child(2) {
+            transform: rotate(-45deg);
+        }
+
+        .Icon span:nth-child(3) {
+            left: 20px;
+            top: 31px;
+        }
+
+        .Icon:hover span:nth-child(1),
+        .Icon:hover span:nth-child(3) {
+            left: -1px;
+        }
+
+        .Icon:hover span:nth-child(1) {
+            top: 15px;
+            transform: rotate(135deg);
+        }
+
+        .Icon:hover span:nth-child(2) {
+            transform: rotate(0deg);
+        }
+
+        .Icon:hover span:nth-child(3) {
+            top: 31px;
+            transform: rotate(45deg);
         }
     </style>
 </head>
@@ -65,9 +157,12 @@
     <!-- Sidebar/menu -->
     <div class="w3-sidebar w3-white w3-animate-left" style="display:none;" id="mySidebar"><br>
         <div class="w3-container">
-            <button onclick="w3_close()" class="button-close w3-right w3-padding w3-hover-grey">
-                <i class="fa fa-remove"></i>
+            <button id="icon" onclick="w3_close()" class="Icon w3-right">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
+
             <img src="ist.png" style="width:45%;" class="w3-round"><br><br>
             <h4><b>PAGE CONTENT</b></h4>
         </div>
@@ -97,10 +192,15 @@
     <!-- !PAGE CONTENT! -->
     <div id="main">
         <!-- Sidebar button -->
-        <nav class="navbar">
+        <nav id="navbar">
             <div class="topnav">
-                <button id="openNav" class="w3-button w3-xxlarge w3-hover-grey" onclick="w3_open()"><i
-                        class="fa fa-bars"></i></button>
+                <!-- <button id="openNav" class="w3-button w3-xxlarge w3-hover-grey" onclick="w3_open()"><i
+                        class="fa fa-bars" style=font-size:10px;></i></button> -->
+                <button id="openNav" onclick="w3_open()">
+                    <div class="line-one"></div>
+                    <div class="line-two"></div>
+                    <div class="line-three"></div>
+                </button>
             </div>
             <div class="topnav">
                 <img src="ist.png" class="brand-logo center w3-circle w3-hover-opacity">
@@ -195,6 +295,16 @@
     <!-- End page content -->
 
     <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("navbar").style.top = "0";
+            } else {
+                document.getElementById("navbar").style.top = "-50px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
         // Script to open and close sidebar
         function w3_open() {
             document.getElementById("main").style.marginLeft = "25%";
