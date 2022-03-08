@@ -16,6 +16,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" charset="UTF-8"></script>
     <style>
         body,
         h1,
@@ -149,6 +150,69 @@
             top: 31px;
             transform: rotate(45deg);
         }
+
+        .container {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        .card-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            top: 0;
+        }
+
+        .card-content2 {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            top: 0;
+        }
+
+        .card {
+            position: relative;
+            background: #fff;
+            max-width: 380px;
+            width: 380px;
+            height: auto;
+            margin-left: 0;
+            margin: 0 26px 30px 15px;
+            border-radius: 7px;
+            box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+            overflow: hidden;
+        }
+
+        .card-image {
+            max-height: 200px;
+        }
+
+        .card-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .card-info {
+            position: relative;
+            color: #222;
+            padding: 10px 20px 20px;
+        }
+
+        .card-info h3 {
+            font-size: 1.8em;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        .card-info p {
+            font-size: 1em;
+            margin-bottom: 5px;
+        }
     </style>
 </head>
 
@@ -192,7 +256,7 @@
     <!-- !PAGE CONTENT! -->
     <div id="main">
         <!-- Sidebar button -->
-        <nav id="navbar">
+        <nav id="navbar" style="z-index: 100;">
             <div class="topnav">
                 <!-- <button id="openNav" class="w3-button w3-xxlarge w3-hover-grey" onclick="w3_open()"><i
                         class="fa fa-bars" style=font-size:10px;></i></button> -->
@@ -220,56 +284,55 @@
         </div>
 
         <!-- First Photo Grid-->
-        <div class="w3-row-padding">
-            <div class="w3-third w3-container w3-margin-bottom">
-                <a href="PWON.jpg"><img src="PWON.jpg" alt="PWON" style="width:100%" class="w3-hover-opacity"></a>
-                <div class="w3-container w3-white">
-                    <p><b>PWON Forecasting</b></p>
-                    <p>PWON terdapat HnS pattern dengan neckline di level 468. Menurut saya, PWON memiliki potensi
-                        kenaikan minimal ke 486-490 sebagai TP1 dan 500 sebagai TP2.
-                        <br><br>Sektor properti saat ini sedang tertekan pergerakannya dan jika dibandingkan, sektor
-                        ini
-                        memiliki RRR yang sangat baik mengingat hanya sektor ini yang belum jalan.</p>
+        <div class="container">
+            <div class="card-content">
+                <div class="card">
+                    <div class="card-image"><a href="PWON.jpg"><img src="PWON.jpg" alt="PWON"></a></div>
+                    <div class="card-info">
+                        <h3><b>PWON Forecasting</b></h3>
+                        <p>PWON terdapat HnS pattern dengan neckline di level 468. Menurut saya, PWON memiliki potensi
+                            kenaikan minimal ke 486-490 sebagai TP1 dan 500 sebagai TP2.
+                            <br><br>Sektor properti saat ini sedang tertekan pergerakannya dan jika dibandingkan, sektor
+                            ini
+                            memiliki RRR yang sangat baik mengingat hanya sektor ini yang belum jalan.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image"><a href="ELSA.jpg"><img src="ELSA.jpg" alt="ELSA"></a></div>
+                    <div class="card-info">
+                        <h3><b>ELSA Forecasting</b></h3>
+                        <p>ELSA ada kemungkinan bergerak dengan pola seperti ini, besok akan bergerak menuju neckline
+                            double
+                            top di 334-342 yang di mana jika berhasil tembus dengan volume yang besar, maka akan
+                            melanjutkan
+                            kenaikan ke level 400.
+                            <br><br>Kemungkinan kedua adalah tidak kuat menembus dan pullback ke level 306-312 yang
+                            bertepatan dengan dynamic supports.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image"><a href="PTBA.jpg"><img src="PTBA.jpg" alt="PTBA"></a></div>
+                    <div class="card-info">
+                        <h3><b>PTBA HIT TP2!</b></h3>
+                        <p>PTBA kemungkinan besar juga labanya akan besar seperti ITMG,
+                            jadi untuk prediksinya PTBA akan melanjutkan kenaikan dengan TP1 3100-3180 dan TP2 3410-3500
+                            yang merupakan wave 5.</p>
+                    </div>
                 </div>
             </div>
-            <div class="w3-third w3-container w3-margin-bottom">
-                <a href="ELSA.jpg"><img src="ELSA.jpg" alt="ELSA" style="width:100%" class="w3-hover-opacity"></a>
-                <div class="w3-container w3-white">
-                    <p><b>ELSA Forecasting</b></p>
-                    <p>ELSA ada kemungkinan bergerak dengan pola seperti ini, besok akan bergerak menuju neckline
-                        double
-                        top di 334-342 yang di mana jika berhasil tembus dengan volume yang besar, maka akan
-                        melanjutkan
-                        kenaikan ke level 400.
-                        <br><br>Kemungkinan kedua adalah tidak kuat menembus dan pullback ke level 306-312 yang
-                        bertepatan dengan dynamic supports.</p>
-                </div>
-            </div>
-            <div class="w3-third w3-container w3-margin-bottom">
-                <a href="PTBA.jpg"><img src="PTBA.jpg" alt="PTBA" style="width:100%" class="w3-hover-opacity"></a>
-                <div class="w3-container w3-white">
-                    <p><b>PTBA HIT TP2!</b></p>
-                    <p>PTBA kemungkinan besar juga labanya akan besar seperti ITMG,
-                        jadi untuk prediksinya PTBA akan melanjutkan kenaikan dengan TP1 3100-3180 dan TP2 3410-3500
-                        yang merupakan wave 5.</p>
+            <!--Row 2-->
+            <div class="card-content2">
+                <div class="card">
+                    <div class="card-image"><a href="ITMG.jpg"><img src="ITMG.jpg" alt="ITMG"></a></div>
+                    <div class="card-info">
+                        <h3><b>ITMG HIT TP1!</b></h3>
+                        <p>ITMG telah mengeluarkan laporan keuangan yang menunjukkan tren positif pada laba 2021,
+                            jadi kemungkinan besar ITMG akan melanjutkan wave 5 dengan TP1 29K-30K dan TP2 31.8K-33K.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-
-
-        <!-- Second Photo Grid-->
-        <div class="w3-row-padding">
-            <div class="w3-third w3-container w3-margin-bottom">
-                <a href="ITMG.jpg"><img src="ITMG.jpg" alt="ITMG" style="width:100%" class="w3-hover-opacity"></a>
-                <div class="w3-container w3-white">
-                    <p><b>ITMG HIT TP1!</b></p>
-                    <p>ITMG telah mengeluarkan laporan keuangan yang menunjukkan tren positif pada laba 2021,
-                        jadi kemungkinan besar ITMG akan melanjutkan wave 5 dengan TP1 29K-30K dan TP2 31.8K-33K.
-                    </p>
-                </div>
-            </div>
-        </div>
-
         <div id="about" class="w3-container w3-padding-large w3-topbar">
             <h4><b><i class="fa fa-user"></i> About Website</b></h4>
             <p>This website was created to share some analysis for everyone just for free.</p>
@@ -291,34 +354,34 @@
         <div class="w3-black w3-center w3-padding-24">Made by <a href="https://www.instagram.com/fathurwithyou/"
                 title="Fathurwithyou on Instagram" target="_blank" class="w3-hover-opacity">Fathurwithyou</a>
         </div>
-    </div>
-    <!-- End page content -->
 
-    <script>
-        var prevScrollpos = window.pageYOffset;
-        window.onscroll = function () {
-            var currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
-                document.getElementById("navbar").style.top = "0";
-            } else {
-                document.getElementById("navbar").style.top = "-50px";
+        <!-- End page content -->
+
+        <script type="text/javascript">
+            var prevScrollpos = window.pageYOffset;
+            window.onscroll = function () {
+                var currentScrollPos = window.pageYOffset;
+                if (prevScrollpos > currentScrollPos) {
+                    document.getElementById("navbar").style.top = "0";
+                } else {
+                    document.getElementById("navbar").style.top = "-50px";
+                }
+                prevScrollpos = currentScrollPos;
             }
-            prevScrollpos = currentScrollPos;
-        }
-        // Script to open and close sidebar
-        function w3_open() {
-            document.getElementById("main").style.marginLeft = "25%";
-            document.getElementById("mySidebar").style.width = "25%";
-            document.getElementById("mySidebar").style.display = "block";
-            document.getElementById("openNav").style.display = 'none';
-        }
+            // Script to open and close sidebar
+            function w3_open() {
+                document.getElementById("main").style.marginLeft = "25%";
+                document.getElementById("mySidebar").style.width = "25%";
+                document.getElementById("mySidebar").style.display = "block";
+                document.getElementById("openNav").style.display = 'none';
+            }
 
-        function w3_close() {
-            document.getElementById("main").style.marginLeft = "0%";
-            document.getElementById("mySidebar").style.display = "none";
-            document.getElementById("openNav").style.display = "inline-block";
-        }
-    </script>
+            function w3_close() {
+                document.getElementById("main").style.marginLeft = "0%";
+                document.getElementById("mySidebar").style.display = "none";
+                document.getElementById("openNav").style.display = "inline-block";
+            }
+        </script>
 </body>
 
 </html>
