@@ -213,6 +213,10 @@
             font-size: 1em;
             margin-bottom: 5px;
         }
+
+        .sidebar .active{
+            color:#26a69a;
+        }
     </style>
 </head>
 
@@ -231,14 +235,14 @@
             <h4><b>PAGE CONTENT</b></h4>
         </div>
 
-        <div class="w3-bar-block">
-            <a href="#analysis" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i
+        <div class="sidebar w3-bar-block">
+            <a href="#analysis" onclick="w3_close()" class="active w3-bar-item w3-button w3-padding"><i
                     class="fa fa-line-chart fa-fw w3-margin-right"></i>ANALYSIS</a>
             <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
                     class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a>
             <a href="#telegram" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
                     class="fa fa-telegram fa-fw w3-margin-right"></i>TELEGRAM</a>
-            <a href="https://t.me/kaumtradevestor" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
+            <a href="https://t.me/kaumtradevestor" onclick="w3_close()" class="w3-bar-item w3-button w3-padding" target="_blank"><i
                     class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
         </div>
 
@@ -373,6 +377,10 @@
         <!-- End page content -->
 
         <script type="text/javascript">
+            $(document).on('click','.sidebar a', function(){
+                $(this).addClass('active').siblings().removeClass('active')
+            })
+
             var prevScrollpos = window.pageYOffset;
             window.onscroll = function () {
                 var currentScrollPos = window.pageYOffset;
