@@ -18,6 +18,12 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" charset="UTF-8"></script>
     <style>
+        html,
+        body {
+            max-width: 100%;
+            min-width: 100%;
+        }
+
         body,
         h1,
         h2,
@@ -157,19 +163,12 @@
             justify-content: center;
             align-items: flex-start;
             flex-direction: column;
+            max-width: 100%;
         }
 
         .card-content {
             display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            top: 0;
-        }
-
-        .card-content2 {
-            display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: flex-start;
             flex-wrap: wrap;
             top: 0;
@@ -178,8 +177,9 @@
         .card {
             position: relative;
             background: #fff;
+            max-width: 100%;
+            width: 100%;
             max-width: 380px;
-            width: 380px;
             height: auto;
             margin-left: 0;
             margin: 0 26px 30px 15px;
@@ -193,7 +193,7 @@
         }
 
         .card-image img {
-            max-width: 100%;
+            width: 100%;
             height: auto;
         }
 
@@ -219,7 +219,7 @@
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
     <!-- Sidebar/menu -->
-    <div class="w3-sidebar w3-white w3-animate-left" style="display:none;" id="mySidebar"><br>
+    <div class="w3-sidebar w3-white w3-animate-left" style="display:none;z-index: 101;" id="mySidebar"><br>
         <div class="w3-container">
             <button id="icon" onclick="w3_close()" class="Icon w3-right">
                 <span></span>
@@ -319,9 +319,9 @@
                             yang merupakan wave 5.</p>
                     </div>
                 </div>
-            </div>
-            <!--Row 2-->
-            <div class="card-content2">
+
+                <!--Row 2-->
+
                 <div class="card">
                     <div class="card-image"><a href="ITMG.jpg"><img src="ITMG.jpg" alt="ITMG"></a></div>
                     <div class="card-info">
@@ -333,6 +333,7 @@
                 </div>
             </div>
         </div>
+
         <div id="about" class="w3-container w3-padding-large w3-topbar">
             <h4><b><i class="fa fa-user"></i> About Website</b></h4>
             <p>This website was created to share some analysis for everyone just for free.</p>
@@ -346,8 +347,7 @@
                     target="_blank">https://t.me/indonesiastocktraderchannel</a></p>
             <p>Telegram Group: <a href="https://t.me/indonesiastocktrader"
                     target="_blank">https://t.me/indonesiastocktrader</a></p>
-            <p>Telegram Bot: <a href="https://t.me/indonesiast_bot" target="_blank">https://t.me/IndonesiaST_bot</a>
-            </p>
+            <p>Telegram Bot: <a href="https://t.me/indonesiast_bot" target="_blank">https://t.me/IndonesiaST_bot</a></p>
             <br>
         </div>
 
