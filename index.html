@@ -43,18 +43,24 @@
             display: flex;
             align-items: center;
             justify-content: flex-end;
-            margin-right: 1px;
             transition: top 0.3s;
         }
 
-        .topnav {
-            margin-right: 1rem;
+        .topnav #openNav{
+            text-align: center;
+            justify-content: center;
+            margin-left: 0.5rem;
+            cursor: pointer;
         }
 
-        #openNav {
-            background-color: transparent;
-            border: none;
+        .topnav:first-child {
             margin-right: auto;
+        }
+
+        .topnav img {
+            width: 37px;
+            height: 37px;
+            margin-right: 0.5rem;
             cursor: pointer;
         }
 
@@ -83,15 +89,6 @@
 
         #openNav:hover div {
             width: 35px;
-        }
-
-        .topnav:first-child {
-            margin-right: auto;
-        }
-
-        .topnav img {
-            width: 40px;
-            height: 40px;
         }
 
         .Icon {
@@ -264,14 +261,14 @@
             <div class="topnav">
                 <!-- <button id="openNav" class="w3-button w3-xxlarge w3-hover-grey" onclick="w3_open()"><i
                         class="fa fa-bars" style=font-size:10px;></i></button> -->
-                <button id="openNav" onclick="w3_open()">
+                <div id="openNav" onclick="w3_open()">
                     <div class="line-one"></div>
                     <div class="line-two"></div>
                     <div class="line-three"></div>
-                </button>
+                </div>
             </div>
             <div class="topnav">
-                <img src="ist.png" class="brand-logo center w3-circle w3-hover-opacity">
+                <a href="indonesiastocktrader.github.io"><img src="ist.png" class="brand-logo center w3-circle w3-hover-opacity"></a>
             </div>
         </nav>
 
@@ -415,7 +412,7 @@
             function w3_close() {
                 document.getElementById("main").style.marginLeft = "0%";
                 document.getElementById("mySidebar").style.display = "none";
-                document.getElementById("openNav").style.display = "inline-block";
+                document.getElementById("openNav").style.display = "block";
             }
         </script>
 </body>
