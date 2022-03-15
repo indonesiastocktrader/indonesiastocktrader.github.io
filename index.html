@@ -157,15 +157,17 @@
         .container {
             min-height: 100vh;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: flex-start;
             flex-direction: column;
             max-width: 100%;
+            padding-left: 24px;
+            padding-right: 24px;
         }
 
         .card-content {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: flex-start;
             flex-wrap: wrap;
             top: 0;
@@ -178,8 +180,7 @@
             width: 100%;
             max-width: 380px;
             height: auto;
-            margin-left: 0;
-            margin: 0 26px 30px 15px;
+            margin: 0 25.1px 30px 0px;
             border-radius: 7px;
             box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
             overflow: hidden;
@@ -217,8 +218,8 @@
 
         .tradingview-widget-container{
             width: 100%;
-            padding-left: 16px;
-            padding-right: 16px;
+            padding-left: 24px;
+            padding-right: 24px;
             border-radius: 7px;
         }
     </style>
@@ -284,7 +285,7 @@
 
         <!-- Header -->
         <header>
-            <div class="w3-container w3-bottombar">
+            <div class="w3-container w3-padding-large w3-bottombar">
                 <h1><b>Indonesia Stock Trader Website</b></h1>
                 <p>Stock trader community that is active on telegram.</p>
             </div>
