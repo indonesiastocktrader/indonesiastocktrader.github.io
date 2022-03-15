@@ -46,7 +46,7 @@
             transition: top 0.3s;
         }
 
-        .topnav #openNav{
+        .topnav #openNav {
             text-align: center;
             justify-content: center;
             margin-left: 0.5rem;
@@ -214,6 +214,13 @@
         .sidebar .active {
             color: #26a69a;
         }
+
+        .tradingview-widget-container{
+            width: 100%;
+            padding-left: 16px;
+            padding-right: 16px;
+            border-radius: 7px;
+        }
     </style>
 </head>
 
@@ -268,19 +275,77 @@
                 </div>
             </div>
             <div class="topnav">
-                <a href="indonesiastocktrader.github.io"><img src="ist.png" class="brand-logo center w3-circle w3-hover-opacity"></a>
+                <a href="indonesiastocktrader.github.io"><img src="ist.png"
+                        class="brand-logo center w3-circle w3-hover-opacity"></a>
             </div>
         </nav>
 
         <!-- Header -->
         <header>
-            <div class="w3-container w3-bottombar w3-margin-bottom">
+            <div class="w3-container w3-bottombar">
                 <h1><b>Indonesia Stock Trader Website</b></h1>
-                <p id="analysis">Indonesia Stock Market Analysis and Insights.</p>
+                <p id="analysis">Stock trader community that is active on telegram.</p>
             </div>
         </header>
 
         <div class="w3-container w3-padding-large">
+            <h4><b><i class="fa fa-line-chart"></i> Major Indices</b></h4>
+        </div>
+
+        <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <div class="tradingview-widget-copyright"><span class="blue-text"></div>
+            <script type="text/javascript"
+                src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+                {
+                    "symbols": [{
+                            "description": "COMPOSITE",
+                            "proName": "IDX:COMPOSITE"
+                        },
+                        {
+                            "description": "DJIA",
+                            "proName": "CURRENCYCOM:US30"
+                        },
+                        {
+                            "description": "HSI",
+                            "proName": "HSI:HSI"
+                        },
+                        {
+                            "description": "DAX",
+                            "proName": "XETR:DAX"
+                        },
+                        {
+                            "description": "FTSE 100",
+                            "proName": "CURRENCYCOM:UK100"
+                        },
+                        {
+                            "description": "S&P 500",
+                            "proName": "CURRENCYCOM:US500"
+                        },
+                        {
+                            "description": "SET",
+                            "proName": "SET:SET"
+                        },
+                        {
+                            "description": "KOSPI",
+                            "proName": "KRX:KOSPI"
+                        },
+                        {
+                            "description": "KLSE",
+                            "proName": "INDEX:KLSE"
+                        }
+                    ],
+                    "showSymbolLogo": true,
+                    "colorTheme": "dark",
+                    "isTransparent": false,
+                    "displayMode": "adaptive",
+                    "locale": "en"
+                }
+            </script>
+        </div>
+        <!-- TradingView Widget END -->
+
+        <div class="w3-container w3-padding-large w3-topbar">
             <h4><b><i class="fa fa-line-chart"></i> Analysis</b></h4>
         </div>
 
@@ -293,10 +358,12 @@
                     <div class="card-info">
                         <h3><b>INKP Forecasting</b></h3>
                         <p>INKP sudah bergerak di atas 3 EMAs yang berarti tren sudah cenderung bullish. INKP pada hari
-                            ini pullback ke <em>falling wedge pattern</em> serta sedang mendekati 3 EMAs atau yang kita sebut
+                            ini pullback ke <em>falling wedge pattern</em> serta sedang mendekati 3 EMAs atau yang kita
+                            sebut
                             <em>dynamic supports</em>.</p>
 
-                        <p>Prediksinya, INKP ada kemungkinan untuk naik membentuk ABC <em>correction wave</em> dengan target
+                        <p>Prediksinya, INKP ada kemungkinan untuk naik membentuk ABC <em>correction wave</em> dengan
+                            target
                             9600-9850 jika diukur dengan fibonacci cluster (<em>retracement and extension</em>).</p>
                     </div>
                 </div>
@@ -380,7 +447,8 @@
             <br>
         </div>
 
-        <div class="w3-black w3-center w3-padding-16">Copyright &copy; 2022 Indonesia Stock Trader<br> All Rights Reserved. &vert; Made by <a href="https://www.instagram.com/fathurwithyou/"
+        <div class="w3-black w3-center w3-padding-16">Copyright &copy;2022 Indonesia Stock Trader<br> All Rights
+            Reserved. &vert; Made by <a href="https://www.instagram.com/fathurwithyou/"
                 title="Fathurwithyou on Instagram" target="_blank" class="w3-hover-opacity">Fathurwithyou</a>
         </div>
 
@@ -418,3 +486,5 @@
 </body>
 
 </html>
+
+<!-- TradingView Widget BEGIN -->
