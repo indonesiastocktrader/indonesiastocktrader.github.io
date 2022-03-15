@@ -218,6 +218,7 @@
 
         .tradingview-widget-container{
             width: 100%;
+            height: 100px;
             padding-left: 24px;
             padding-right: 24px;
             border-radius: 7px;
@@ -302,16 +303,40 @@
                 src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
                 {
                     "symbols": [{
-                            "description": "COMPOSITE",
+                            "description": "Indonesia Stock Exchange",
                             "proName": "IDX:COMPOSITE"
                         },
                         {
-                            "description": "DJIA",
+                            "description": "Dow Jones Industrial Average",
                             "proName": "CURRENCYCOM:US30"
                         },
                         {
-                            "description": "HSI",
+                            "description": "NASDAQ 100",
+                            "proName": "GLOBALPRIME:NAS100"
+                        },
+                        {
+                            "description": "S&P 500",
+                            "proName": "CURRENCYCOM:US500"
+                        },
+                        {
+                            "description": "Shanghai Composite",
+                            "proName": "SSE:000001"
+                        },
+                        {
+                            "description": "Hang Seng Index",
                             "proName": "HSI:HSI"
+                        },                      
+                        {
+                            "description": "KOSPI",
+                            "proName": "KRX:KOSPI"
+                        },
+                        {
+                            "description": "NIKKEI 225",
+                            "proName": "INDEX:NKY"
+                        },
+                        {
+                            "description": "Kuala Lumpur Stock Exchange",
+                            "proName": "INDEX:KLSE"
                         },
                         {
                             "description": "DAX",
@@ -320,22 +345,6 @@
                         {
                             "description": "FTSE 100",
                             "proName": "CURRENCYCOM:UK100"
-                        },
-                        {
-                            "description": "S&P 500",
-                            "proName": "CURRENCYCOM:US500"
-                        },
-                        {
-                            "description": "SET",
-                            "proName": "SET:SET"
-                        },
-                        {
-                            "description": "KOSPI",
-                            "proName": "KRX:KOSPI"
-                        },
-                        {
-                            "description": "KLSE",
-                            "proName": "INDEX:KLSE"
                         }
                     ],
                     "showSymbolLogo": true,
