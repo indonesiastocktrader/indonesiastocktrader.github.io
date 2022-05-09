@@ -156,31 +156,35 @@
 
         .container {
             min-height: 100vh;
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            flex-direction: column;
-            max-width: 100%;
-            padding-left: 24px;
-            padding-right: 24px;
+            padding: 0 24px;
+            margin-bottom: 27px;
         }
 
         .card-content {
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 48px;
             top: 0;
         }
 
+        @media only screen and (max-width: 600px){
+            .card-content{
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media only screen and (min-width:601px) and (max-width:1200px){
+            .card-content{
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+
         .card {
-            position: relative;
             background: #fff;
             max-width: 100%;
             width: 100%;
             max-width: 380px;
             height: auto;
-            margin: 0 25.1px 30px 0px;
             border-radius: 7px;
             box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
             overflow: hidden;
@@ -302,11 +306,12 @@
 
         <div class="tradingview-widget-container">
             <div class="tradingview-widget-container__widget"></div>
-            <div class="tradingview-widget-copyright"><span class="blue-text"></div>
+            <div class="tradingview-widget-copyright"><span class="blue-text"></span></div>
             <script type="text/javascript"
                 src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
                 {
-                    "symbols": [{
+                    "symbols": [
+                        {
                             "description": "Indonesia Stock Exchange",
                             "proName": "IDX:COMPOSITE"
                         },
